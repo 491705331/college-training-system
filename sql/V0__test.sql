@@ -8,9 +8,6 @@ MySQL - 8.0.26 : Database - zjut-training
 
 /*!40101 SET SQL_MODE=''*/;
 
-
-
-
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
@@ -35,12 +32,6 @@ CREATE TABLE `testuser` (
 
 insert  into `testuser`(`id`,`username`,`password`,`birthday`) values
     (1,'zhangsan','123','2000-11-06 21:07:25');
-
-
-
-
-
-
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
