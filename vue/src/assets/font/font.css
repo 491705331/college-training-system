@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'BinHuo-RE'; /* 重命名字体名 */
+    src: url('REBEL-SCENE-DEMO-2.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yun-RE'; /* 重命名字体名 */
+    src: url('Yunmobei-enlogo-Thin-2.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
