@@ -22,3 +22,4 @@
 .idea
 /**/target
 /vue/node_modules/
+application-db.yml
