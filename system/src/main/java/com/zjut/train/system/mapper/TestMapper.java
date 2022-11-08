@@ -20,4 +20,22 @@ public interface TestMapper {
      * @return list<User>
      */
     Testuser selectOne(Long userId);
+
+    /**
+     * 插入数据
+     * @param testuser 数据对象
+     */
+    boolean insert(Testuser testuser);
+
+    /**
+     * 更新数据
+     * @param testuser 数据对象
+     */
+    boolean updateById(Testuser testuser);
+
+    /**
+     * 删除数据
+     * @param testuserId id
+     */
+    boolean deleteById(Long testuserId);
 }

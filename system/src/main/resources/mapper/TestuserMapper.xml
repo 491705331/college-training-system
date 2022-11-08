@@ -14,22 +14,65 @@
     <sql id="Base_Column_List" >
         id, username, password, birthday
     </sql>
-    <sql id="table_name">
-        testuser
-    </sql>
     <sql id="select*">
         SELECT <include refid="Base_Column_List"/>
         FROM testuser
     </sql>
+    <sql id="insert_column_list">
+        <trim suffixOverrides=",">
+            <if test="id != null and id != ''">id,</if>
+            <if test="username != null and username != ''">username,</if>
+            <if test="password != null and password != ''">password,</if>
+            <if test="birthday != null and birthday != ''">birthday,</if>
+        </trim>
+    </sql>
+
+    <sql id="insert_value_list">
+        <trim suffixOverrides=",">
+            <if test="id != null and id != ''">#{id},</if>
+            <if test="username != null and username != ''">#{username},</if>
+            <if test="password != null and password != ''">#{password},</if>
+            <if test="birthday != null and birthday != ''">#{birthday},</if>
+        </trim>
+    </sql>
+
 
     <select id="selectUserList" resultType="com.zjut.train.system.domain.po.Testuser">
         <include refid="select*"/>
     </select>
 
     <select id="selectOne" resultType="com.zjut.train.system.domain.po.Testuser">
-       <include refid="select*"/>
-        WHERE id = #{userId}
+        <include refid="select*"/>
+        WHERE id = #{userId} LIMIT 1
     </select>
+
+
+    <insert id="insert" parameterType="Testuser" useGeneratedKeys="true" keyProperty="id">
+        INSERT into testuser(
+            <include refid="insert_column_list"/>
+        ) values (
+            <include refid="insert_value_list"/>
+        )
+    </insert>
+
+    <update id="updateById" parameterType="Testuser">
+        UPDATE testuser
+        <set>
+            <if test="id != null and id != ''">id = #{id},</if>
+            <if test="username != null and username != ''">username = #{username},</if>
+            <if test="password != null and password != ''">password = #{password},</if>
+            <if test="birthday != null and birthday != ''">birthday = #{birthday},</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <update id="deleteById" parameterType="long">
+        DELETE FROM testuser
+        WHERE id = #{testuserId}
+    </update>
+
+
+
 
 
 </mapper>

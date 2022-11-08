@@ -2,10 +2,10 @@
 ## 数据库相关
 ### 导出数据库数据
 
-```sql
--- 1. 进入mysql安装目录的bin目录下
--- 2. 打开cmd（在路径上输入cmd）
--- 3. 输入下列命令
+```text
+1. 进入mysql安装目录的bin目录下
+2. 打开cmd（在路径上输入cmd）
+3. 输入下列命令
 mysqldump -u root -p zjut-training > database_dump.txt
 -- zjut-training 为数据库名
 ```
@@ -27,3 +27,10 @@ security模块：
 system模块：
     -- 系统核心模块
 ```
+
+
+## 工具介绍
+[easy-excel](https://blog.csdn.net/Kk_Chosen1/article/details/123148798)
+
+[api文档](http://localhost:8080/doc.html) ： 需要将本地项目跑起来
+
